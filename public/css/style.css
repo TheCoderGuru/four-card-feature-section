@@ -24,9 +24,9 @@ body {
 }
 .container__description {
   color: hsl(229deg, 6%, 66%);
-  font-size: 1.3em;
+  font-size: 1.2em;
+  padding-inline: 1.2em;
   text-align: center;
-  margin-inline: 3.2em;
 }
 .container__cards {
   display: grid;
@@ -36,21 +36,34 @@ body {
 .container__card {
   background-color: hsl(0deg, 0%, 98%);
   padding: 2em;
-  height: 12em;
-  margin-inline: 2em;
+  height: 16em;
+  width: 25em;
+  margin-inline: auto;
   border-radius: 0.7em;
-  box-shadow: -2px 1px 6px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.75);
   position: relative;
   margin-block-start: 4em;
-  border: 1px solid currentColor;
+}
+.container__card__title {
+  font-size: 1.4em;
+  color: hsl(234deg, 12%, 34%);
 }
 .container__card__description {
   color: hsl(229deg, 6%, 66%);
   font-size: 1.1em;
-  margin-block-end: 1em;
+  padding-inline: -3em;
+  margin-block: 0.5em;
+  line-height: 1.7em;
 }
 .container__card__image {
   position: absolute;
-  right: 2em;
-  margin-block-end: 1em;
+  right: 2.5em;
+  bottom: 1.3em;
+}
+
+@media only screen and (min-width: 1440px) {
+  .container__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
